@@ -1,1 +1,19 @@
-<app-dummy></app-dummy>
+<div class="wrapper">
+  <div class="list-box">
+    <h1>To do list</h1>
+
+    <ul class="list-box__list">
+      <li class="list-box__list__item" *ngFor="let item of itemsList; let i = index">
+        {{ item }}
+        <button (click)="removeItem(item)" class="list-box__list__item__remove-button btn alert">X</button>
+      </li>
+    </ul>
+  </div>
+
+  <form #TodoList="ngForm" (ngSubmit)="addItem(TodoList)" class="list-box__form">
+    <input type="text" class="list-box__form__input form-control" name="item" placeholder="Type your task.." autocomplete="off" ngModel>
+    <button type="submit" class="list-box__form__button btn btn-primary">Add</button>
+    <div *ngIf="error" class="list-box__form__error alert">Provide a task, don't waste your time</div>
+  </form>
+
+</div>
