@@ -1,4 +1,7 @@
-<ul *ngFor="let a of arr">
-    <li>{{ a }}</li>
+<button (click)="addItem()">Add New List</button>
+
+<ul>
+  <li *ngFor="let a of arr; let i = index">{{ a }} {{ i }}<button (click)="remove(i)">x</button></li>
 </ul>
+
 <button (click)="sendNumber()">My Button</button>

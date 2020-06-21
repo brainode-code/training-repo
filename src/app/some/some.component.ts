@@ -7,7 +7,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SomeComponent implements OnInit {
   num: number = 2;
+
+
   @Input() public data: number;
+  @Input() public listItem: number;
 
   constructor() { }
 
