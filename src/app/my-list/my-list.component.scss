@@ -1,0 +1,29 @@
+button {
+  font-size: 20px;
+  padding: 10px 15px;
+  margin: 15px 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+ul {
+  width: 60vw;
+  background-color: lightgray;
+  padding: 10px 0;
+
+  li {
+    margin: 0 25px;
+    font-size: 18px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+
+    .remove {
+      background-color: red;
+      padding: 5px;
+
+    }
+  }
+}

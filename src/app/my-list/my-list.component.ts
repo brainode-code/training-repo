@@ -8,7 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class MyListComponent implements OnInit {
 
   arr = ["lista1", "lista2", "lista3", "lista4"];
-  newLIstNumber = 4;
+
 
   @Output() public sendData: EventEmitter<number> = new EventEmitter();
 
