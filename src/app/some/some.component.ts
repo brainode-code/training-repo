@@ -10,7 +10,7 @@ export class SomeComponent implements OnInit {
 
 
   @Input() public data: number;
-  @Input() public listItem: number;
+  @Input() public removedData: string;
 
   constructor() { }
 

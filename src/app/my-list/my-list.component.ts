@@ -11,6 +11,7 @@ export class MyListComponent implements OnInit {
 
 
   @Output() public sendData: EventEmitter<number> = new EventEmitter();
+  @Output() public sendRemovedData: EventEmitter<string> = new EventEmitter();
 
 
   constructor() { }
@@ -27,7 +28,10 @@ export class MyListComponent implements OnInit {
   }
 
   remove(i) {
-    this.arr.splice(i, 1)
+    this.sendRemovedData.emit(this.arr[i]);
+    console.log(this.arr[i])
+    this.arr.splice(i, 1);
+
   }
 
 }
