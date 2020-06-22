@@ -1,4 +1,11 @@
-<ul *ngFor="let a of arr">
-    <li>{{ a }}</li>
+<ul>
+    <li *ngFor="let a of arr">{{ a }}
+    <button class="delete" (click)="remove(a)">Remove</button>
+    </li>
 </ul>
+
+<div class="conteiner"> 
+        <input type="text" [(ngModel)] ="newTask">
+        <button  (click)="add()" class="add"> Add task</button> 
+</div>
 <button (click)="sendNumber()">My Button</button>
