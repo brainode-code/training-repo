@@ -1,5 +1,5 @@
 <ul>
-    <app-remove-item-list ></app-remove-item-list>
+    <app-remove-item-list [taskList] ="arr" (emitTaskDelete)="remove($event)"></app-remove-item-list>
 </ul>
 
 <app-add-list-item (emitNewTask) = add($event)></app-add-list-item>
