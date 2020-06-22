@@ -1,0 +1,17 @@
+.button { 
+    background-color: none;
+    border: 1px solid black;
+    padding: 7px;
+}
+
+
+.delete { 
+        background-color: rgba(#C14242, 0.5);
+        &:hover { 
+            background-color: rgba(#C14242, 0.8);
+        }
+    }
+
+li { 
+    padding: 10px;
+}

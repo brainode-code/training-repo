@@ -1,4 +1,6 @@
-<ul *ngFor="let a of arr">
-    <li>{{ a }}</li>
+<ul>
+    <app-remove-item-list [taskList] ="arr" (emitTaskDelete)="remove($event)"></app-remove-item-list>
 </ul>
-<button (click)="sendNumber()">My Button</button>
+
+<app-add-list-item (emitNewTask) = add($event)></app-add-list-item>
+<button class="button" (click)="sendNumber()">My Button</button>
