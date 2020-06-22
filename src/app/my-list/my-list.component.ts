@@ -8,6 +8,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 export class MyListComponent implements OnInit {
 
   arr = ["lista1", "lista2", "lista3", "lista4"];
+  value: string = "";
 
 
   @Output() public sendData: EventEmitter<number> = new EventEmitter();
@@ -24,7 +25,11 @@ export class MyListComponent implements OnInit {
   }
 
   addItem() {
-    this.arr.push(`lista${this.arr.length + 1}`)
+    if (this.value === "") {
+      return alert("type some task")
+    }
+    this.arr.push(`${this.value}`);
+
   }
 
   remove(i) {
