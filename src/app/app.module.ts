@@ -7,6 +7,7 @@ import { MyListComponent } from './my-list/my-list.component';
 import { SomeComponent } from './some/some.component';
 import { AddListItemComponent } from './add-list-item/add-list-item.component';
 import { FormsModule } from '@angular/forms';
+import { RemoveItemListComponent } from './remove-item-list/remove-item-list.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     DummyComponent,
     MyListComponent,
     SomeComponent,
-    AddListItemComponent
+    AddListItemComponent,
+    RemoveItemListComponent
   ],
   imports: [
     BrowserModule, 

@@ -1,7 +1,5 @@
 <ul>
-    <li *ngFor="let a of arr">{{ a }}
-    <button class="delete" (click)="remove(a)">Remove</button>
-    </li>
+    <app-remove-item-list ></app-remove-item-list>
 </ul>
 
 <app-add-list-item (emitNewTask) = add($event)></app-add-list-item>
