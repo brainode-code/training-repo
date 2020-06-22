@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+
 
 @Component({
   selector: 'app-add-list-item',
@@ -6,10 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-list-item.component.scss']
 })
 export class AddListItemComponent implements OnInit {
+    
+
+  @Output() emitNewTask  = new EventEmitter<string>(); 
+  
+  newTask : string; 
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  add( ) { 
+      this.emitNewTask.emit(this.newTask);
+      this.newTask = "";
+  }
 }

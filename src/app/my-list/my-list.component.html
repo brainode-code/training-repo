@@ -4,8 +4,5 @@
     </li>
 </ul>
 
-<div class="conteiner"> 
-        <input type="text" [(ngModel)] ="newTask">
-        <button  (click)="add()" class="add"> Add task</button> 
-</div>
+<app-add-list-item (emitNewTask) = add($event)></app-add-list-item>
 <button (click)="sendNumber()">My Button</button>
