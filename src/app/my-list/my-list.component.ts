@@ -7,7 +7,9 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class MyListComponent implements OnInit {
   arr = ["lista1", "lista2", "lista3"];
+  removedArr = [];
   @Output() public sendData: EventEmitter<number> = new EventEmitter();
+  @Output() public sendRemovedData: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
@@ -26,6 +28,8 @@ export class MyListComponent implements OnInit {
     const index: number = this.arr.indexOf(item);
     if (index !== -1) {
       this.arr.splice(index, 1);
+      this.removedArr.push(item);
+      this.sendRemovedData.emit(this.removedArr);
     }
   }
 
