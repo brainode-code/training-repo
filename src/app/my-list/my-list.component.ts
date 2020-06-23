@@ -22,4 +22,11 @@ export class MyListComponent implements OnInit {
     this.arr.push('lista' + (this.arr.length + 1))
   }
 
+  removeItem(item) {
+    const index: number = this.arr.indexOf(item);
+    if (index !== -1) {
+      this.arr.splice(index, 1);
+    }
+  }
+
 }
