@@ -1,2 +1,8 @@
-<app-my-list (sendData)="showData($event)"></app-my-list>
-<app-some [data]="dummyData"></app-some>
+<app-my-list 
+	(sendData)="showData($event)" 
+	(sendRemovedData)="showRemovedData($event)">
+</app-my-list>
+<app-some 
+	[data]="dummyData" 
+	[removedData]="dummyRemovedData">
+</app-some>
