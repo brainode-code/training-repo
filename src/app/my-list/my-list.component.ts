@@ -18,4 +18,8 @@ export class MyListComponent implements OnInit {
     this.sendData.emit(this.arr.length);
   }
 
+  addElement() {
+    this.arr.push('lista' + (this.arr.length + 1))
+  }
+
 }
