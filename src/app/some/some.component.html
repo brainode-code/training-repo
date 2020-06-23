@@ -1,7 +1,7 @@
 <p>No. of Elements: </p>
 {{ data }}
 <hr>
-
-<ul>Removed Elements:
-  <li *ngFor="let list of removedData">{{ list }}</li>
+<p>Removed Elements:</p>
+<ul>
+  <li class="listItem" *ngFor="let list of removedData">{{ list }}</li>
 </ul>

@@ -2,9 +2,9 @@
   <li 
 		*ngFor="let a of arr">
 			{{ a }}
-		<button (click)="removeItem(a)">x</button>
+		<button class="btn removeBtn" (click)="removeItem(a)">x</button>
 	</li>
 </ul>
-<button (click)="addElement()">Add New List Element</button>
+<button class="btn addItemBtn" (click)="addElement()">Add New List Element</button>
 <hr>
-<button (click)="sendNumber()">Show Number</button>
+<button class="btn showNumberBtn" (click)="sendNumber()">Show Number</button>
